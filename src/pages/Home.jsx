@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const API = import.meta.env.VITE_BACKEND_URL || 'http://localhost:8000'
 
@@ -32,7 +33,7 @@ function Home() {
         <section className="lg:col-span-2 bg-slate-800/50 border border-blue-500/20 rounded-2xl p-6">
           <div className="flex items-center justify-between mb-4">
             <h2 className="text-xl font-semibold text-white">Latest Shared Notes</h2>
-            <a href="/add-note" className="text-sm text-blue-300 hover:text-white">Share a note</a>
+            <Link to="/add-note" className="text-sm text-blue-300 hover:text-white">Share a note</Link>
           </div>
           {loading ? (
             <p className="text-blue-200">Loading...</p>
@@ -62,7 +63,7 @@ function Home() {
         <section className="bg-slate-800/50 border border-blue-500/20 rounded-2xl p-6">
           <div className="flex items-center justify-between mb-4">
             <h2 className="text-xl font-semibold text-white">Recent Messages to Teachers</h2>
-            <a href="/message-teacher" className="text-sm text-blue-300 hover:text-white">Send message</a>
+            <Link to="/message-teacher" className="text-sm text-blue-300 hover:text-white">Send message</Link>
           </div>
           {loading ? (
             <p className="text-blue-200">Loading...</p>

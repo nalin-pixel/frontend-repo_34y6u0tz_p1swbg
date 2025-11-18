@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import AddNote from './pages/AddNote'
 import MessageTeacher from './pages/MessageTeacher'
+import Test from './Test'
 
 function App() {
   return (
@@ -14,6 +15,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/add-note" element={<AddNote />} />
           <Route path="/message-teacher" element={<MessageTeacher />} />
+          <Route path="/test" element={<Test />} />
+          <Route path="*" element={<div className="text-blue-200">Page not found. <a href="/" className="text-blue-400 hover:text-white underline">Go Home</a></div>} />
         </Routes>
       </div>
       <footer className="border-t border-white/10 py-6 text-center text-blue-200/70">
